@@ -1,0 +1,405 @@
+/* Normalizar Navegador */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Globales */
+
+html {
+  font-size: 100%;
+  /* 1rem = 10px */
+  scroll-behavior: smooth;
+  /* nos permite activar un desplazamiento suave (smooth scroll) al pulsar en un enlace de anclas <a>  */
+
+}
+
+
+
+.wrapper {  
+  width: 1200px; /* Este ancho se puede ajustar según sea necesario */  
+  display: flex; /* Asegura que las tarjetas se alineen en una fila */  
+  flex-wrap: wrap; /* Permite que los elementos internos se envuelvan si es necesario */  
+  gap: 40px; /* Espacio entre las tarjetas */  
+  text-align: center;  
+  margin-top: 7%;
+}  
+
+
+
+.wrapper .card {  
+  flex: 0 1 220px; /* Esto define que cada tarjeta ocupará 220px de ancho (ajusta como desees) */  
+  display: flex;  
+  flex-direction: column;  
+  justify-content: center;  
+  align-items: center;  
+  height: auto; /* Cambiado de 100vh a auto */  
+  perspective: 1000px;  
+  perspective-origin: 50% 50%;  
+  margin-bottom: 35px; /* Ajusta este valor para cambiar el espacio entre filas */  
+}  
+
+
+
+
+.card .imgContainer {  
+  width: 100%; /* Asegura que ocupe el ancho del contenedor de la tarjeta */  
+  aspect-ratio: 2 / 3; /* Mantiene la relación de aspecto */  
+  background: var(--imgUrl);  
+  background-position: center;  
+  background-size: cover;  
+  border-radius: 10px;  
+  transition: 500ms ease;  
+  box-shadow: 0 10px 30px #000000cc;  
+  border: 1px solid #fff;  
+  cursor: pointer;  
+}  
+
+
+.card .img {
+  position: absolute;
+  width: 220px;
+  margin-top: 3px;
+  aspect-ratio: 3 / 4;
+  background: var(--pngImgUrl);
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  transform: translate3d(0px, 0px, 0px) scale(1);
+  transition: 500ms ease;
+  transform-origin: bottom;
+  z-index: 10;
+  opacity: 0;
+}
+
+.vermas {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  /* Espacio encima del h3 */
+  width: 245px;
+  height: auto;
+  padding: 0%;
+  margin-top: 9%;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.vermastitulo {
+  position: absolute;
+  font-family: 'Orbitron', sans-serif;
+  font-size: .9vw;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 290px;
+  background-color: rgba(0, 0, 9, 0.45);
+  color: #FFE81F;
+  width: 245px;
+  padding: 10px;
+}
+
+h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3vw;
+  font-weight: bold;
+  text-align: center;
+}
+
+.vermas h3 a {
+  color: #FFE81F;
+  text-decoration: none;
+}
+
+.vermas h3 a:hover {
+  color: #4BD5EE;
+}
+
+.img .overLayer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  width: 100%;
+  height: 60px;
+  filter: blur(13px);
+  opacity: 1;
+  transition: opacity 500ms ease;
+  background: #000;
+}
+
+.imgContainer:hover {
+  box-shadow: 0px 50px 150px #000000cc;
+  transform: translate3d(0px, 0px, 50px) rotate3d(1, 0, 0, 55deg);
+  filter: brightness(30%);
+}
+
+.imgContainer:hover~.img {
+  transform: translate3d(0px, -50px, 50px) scale(1.2);
+  opacity: 1;
+}
+
+.cuerpopersonajes {  
+  display: flex; /* Utiliza flexbox para la disposición */  
+  justify-content: flex-start; /* Alinea los elementos al inicio */  
+}  
+
+.filtros {  
+  width: 260px; /* Ancho fijo de 260px */   
+  margin-left: 3%;  
+  margin-right: 3.5%;  
+  margin-top: 1%;  
+  text-align: start;   
+}  
+
+.filtros2 {  
+  margin-left: 3%;  
+  margin-bottom: 4%;  
+}  
+
+.filtro-item {  
+  display: flex;  
+  align-items: flex-start; /* Alineación en la parte superior */  
+  margin-bottom: 10px; /* Espacio entre cada grupo de label e input */  
+}  
+
+.filtro-item label {  
+  margin-right: 10px; /* Espacio entre label y input */  
+  width: 200px; /* Ancho fijo para los labels */  
+}  
+
+.filtro-item input {  
+  margin-left: 5px; /* Espacio entre label y input */  
+} 
+
+fieldset {  
+  border: 3px solid #4BD5EE;  
+  padding: 20px;
+}  
+
+legend {  
+  color: #FF2400;  
+  text-align: center; 
+  font-size: 1.3vw;
+  font-family: 'Star Jedi Hollow', sans-serif;
+  letter-spacing: 0.4vw;
+}
+
+.filtros h2{
+  color: #4BD5EE;  
+  text-align: center; 
+  font-size: 2.5vw;
+  font-family: 'Star Jedi Hollow', sans-serif;
+  letter-spacing: 0.4vw;
+
+}
+
+
+/* BUSCADOR */
+
+.buscadorpersonajes {
+  display: flex;
+  flex-direction: row;
+  /* Coloca los elementos en una columna */
+  align-items: flex-start;
+  /* Alinear los elementos al inicio */
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-left: 11%;
+  margin-top: -7px;
+  opacity: 0.8;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.tgl-skewed {
+  width: 500px;
+  height: 47px;
+  overflow: hidden;
+  transform: skew(-10deg);
+  backface-visibility: hidden;
+  transition: all .2s ease;
+  font-family: sans-serif;
+  border-radius: 4%;
+  margin-right: 1%;
+  font-size: 1vw;
+  font-weight: 700;
+  text-align: center;
+  &:after,
+  &:before {
+    transform: skew(10deg);
+    display: inline-block;
+    transition: all .2s ease;
+    width: 100%;
+    position: absolute;
+    line-height: 2em;
+  }
+}
+
+.buscadorpersonajes .btnbuscar {
+  width: 65px;
+  height: 25px;
+  background-color: #4BD5EE;
+  border: none;
+  color: #0B0B0F;
+  font-size: 1vw;
+  font-weight: 700;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 13px;
+  margin-bottom: 20px;
+  margin-right: 1%;
+}
+
+.buscadorpersonajes .btnbuscar:hover {
+  box-shadow: 2px 0px 6px 10px rgba(69, 246, 243, 0.21);
+  -webkit-box-shadow: 2px 0px 6px 10px rgba(69, 246, 243, 0.21);
+  -moz-box-shadow: 2px 0px 6px 10px rgba(69, 246, 243, 0.21);
+}
+
+.buscadorpersonajes .btnborrar {
+  width: 65px;
+  height: 25px;
+  background-color: #FF2400;
+  border: none;
+  color: #0B0B0F;
+  font-size: 1vw;
+  font-weight: 700;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 13px;
+  margin-bottom: 20px;
+}
+
+.buscadorpersonajes .btnborrar:hover {
+  box-shadow: 2px 0px 6px 10px rgba(255, 36, 0, 0.21);
+  -webkit-box-shadow: 2px 0px 6px 10px rgba(255, 36, 0, 0.21);
+  -moz-box-shadow: 2px 0px 6px 10px rgba(255, 36, 0, 0.21);
+}
+
+
+/* Form(filtros) */
+
+label{
+  color: #fff;
+  font-family: sans-serif;
+}
+
+
+.grid-contenedor {
+  display: grid;
+  grid-template-areas: 'banner-inicio banner-inicio banner-inicio'
+    'nav nav nav'
+    'aside aside aside'
+    'header header header'
+    'main main main'
+    'botones-fin botones-fin botones-fin'
+    'aside aside aside'
+    'footer footer footer';
+  gap: 10px;
+}
+
+/* CELULARES */
+/* Medias Querys/Breakpoints/Responsive */
+@media (100px <=width <=200px) {
+
+  /*(min-width: 100px) and (max-width: 200px)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio'
+      'nav'
+      'aside'
+      'header'
+      'main'
+      'botones-fin'
+      'aside'
+      'footer';
+  }
+
+
+}
+
+/* CELULARES */
+/* Medias Querys/Breakpoints/Responsive */
+@media (201px <=width <=320px) {
+
+  /*(min-width: 201px) and (max-width: 320px)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio'
+      'nav'
+      'aside'
+      'header'
+      'main'
+      'botones-fin'
+      'aside'
+      'footer';
+  }
+
+
+
+}
+
+/* CELULARES */
+/* Medias Querys/Breakpoints/Responsive */
+@media (321px <=width <=460px) {
+
+  /*(min-width: 321px) and (max-width: 460px)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio'
+      'nav'
+      'aside'
+      'header'
+      'main'
+      'botones-fin'
+      'aside'
+      'footer';
+  }
+
+
+
+}
+
+
+
+/* TABLET */
+@media (461px <=width <=768px) {
+
+  /*(min-width: 461px) and (max-width: 768px)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio'
+      'nav nav'
+      'aside aside'
+      'header header'
+      'main main'
+      'botones-fin botones-fin'
+      'aside aside'
+      'footer footer';
+  }
+
+
+
+}
+
+/* PC */
+@media (769px <=width) {
+
+  /*(min-width: 769px) and (max-width: .....)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio banner-inicio'
+      'nav nav nav'
+      'aside aside aside'
+      'header header header'
+      'main main main'
+      'botones-fin botones-fin botones-fin'
+      'aside aside aside'
+      'footer footer footer';
+  }
+
+
+
+}

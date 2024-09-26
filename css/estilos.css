@@ -29,7 +29,7 @@ h1 {
   font-size: 3.5vw;
   margin: 10px 0px 35px 0px;
   font-family: 'Star Jedi Outline', sans-serif;
-  letter-spacing: 0.3vw;
+  letter-spacing: 0.4vw;
   color: #FFE81F;
 }
 
@@ -45,6 +45,19 @@ h2 {
 }
 
 p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #FFE81F;
+  font-size: 1.5vw;
+  text-align: center;
+  margin-left: 10%;
+  letter-spacing: 0.3vw;
+  line-height: 3vw;
+  max-width: 1200px;
+}
+
+cite{
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -223,7 +236,7 @@ ul.nav li.no-hover a:hover {
   align-items: center;
   /* Centra verticalmente los elementos */
   padding: 15px;
-  margin-top: 220px;
+  margin-top: 15%;
 }
 
 
