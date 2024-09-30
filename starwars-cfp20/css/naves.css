@@ -1,0 +1,168 @@
+.borrar {
+    width: 130px;
+    margin-left: 48%;
+    margin-top: 2%;
+    font-size: 1.1vw;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    background-color: #4BD5EE;
+    border-radius: 5px;
+    border: solid #FFE81F;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.borrar:hover {
+    background-color: #FFE81F;
+    border: 4px #4BD5EE solid;
+}
+
+.gallery {
+    width: 950px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    text-align: center;
+    margin: 5% 0% 3% 23%;
+}
+
+.draggable {
+    cursor: grab;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.draggable img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 2px 1px 20px rgba(192, 192, 192, 0.69);
+    transition: transform 0.2s;
+}
+
+.drop-zone {
+    margin-left: 35%;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3vw;
+    width: 500px;
+    height: 250px;
+    border: 2px dashed #4BD5EE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 1px 20px rgba(192, 192, 192, 0.69);
+    transition: border-color 0.3s;
+}
+
+.drop-zone.highlight {
+    background-color: rgba(75, 213, 238, 0.2);
+}
+
+.draggablecuerpoinfo {
+    display: none;
+    /* Ocultar por defecto */
+    margin-top: 3%;
+}
+
+.info-visible {
+    display: block;
+    /* Mostrar cuando es visible */
+}
+
+.info-hidden {
+    display: none;
+    /* Ocultar cuando no es visible */
+}
+
+.info-block {
+    display: flex;
+    /* Usar flexbox para un layout horizontal */
+    justify-content: center;
+    /* Espacio entre elementos */
+    align-items: flex-start;
+    /* Alinear los elementos al inicio por defecto */
+    width: 1400px;
+    /* Mantén el ancho deseado */
+    height: auto;
+    margin-left: 5%;
+}
+
+.containerinfo {
+    width: 1400px;
+    /* Ajusta el tamaño según necesites */
+    border-radius: 10px;
+    padding: 10px;
+    /* Mantener el espaciado interno */
+    display: flex;
+    flex-direction: column;
+    /* Mantener contenido en vertical */
+    align-items: center;
+    /* Centrar el contenido dentro del contenedor */
+}
+
+.draggableimagenreal {
+    display: flex;
+    /* Usar flexbox para mostrar imágenes en línea */
+    justify-content: center;
+    /* Centrar las imágenes horizontalmente, puedes cambiar a space-between si prefieres espacio entre ellas */
+    gap: 10px;
+    /* Espacio entre imágenes (ajustar según preferencia) */
+    width: 100%;
+    margin-top: 2%;
+}
+
+.draggableimagenreal img {
+    width: 600px;
+    /* Asegúrate de que las imágenes no excedan el ancho del contenedor */
+    height: 450px;
+    /* Mantiene la proporción de las imágenes */
+    border-radius: 5%;
+}
+
+
+.info-block h3 {
+    color: #FFE81F;
+    list-style: none;
+    line-height: 3vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5vw;
+    font-weight: bold;
+    text-align: start;
+    margin-bottom: 3%;
+}
+
+
+
+.info-block ul li {
+    color: white;
+    list-style: none;
+    line-height: 2vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1vw;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.info-block ul li strong {
+    color: #FFE81F;
+    text-align: start;
+}
+
+.info-block p {
+    color: white;
+    line-height: 1.8vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2vw;
+    text-align: start;
+    margin-left: 0%;
+}
+
+.info-block p strong {
+    color: #FFE81F;
+    text-align: start;
+}

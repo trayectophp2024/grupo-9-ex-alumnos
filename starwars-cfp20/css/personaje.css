@@ -1,0 +1,88 @@
+.containercard {  
+    width: 100%;  
+    display: flex;  
+    justify-content: center;  
+}  
+
+.cardpersonaje {  
+    width: 1000px; /* Ancho del card */  
+    height: 500px; /* Alto del card */  
+    background-color: transparent;  
+    border-radius: 3%;  
+    box-shadow: 2px 1px 23px 13px rgba(192, 192, 192, 0.69);  
+    display: flex; /* Asegura que el contenido interno se alinee correctamente */  
+}  
+
+
+
+.descripcionpersonaje {  
+    
+    box-sizing: border-box; /* Asegúrate de que el padding no afecte el tamaño total */  
+}
+.descripcionpersonaje {  
+    width: 65%; /* Ajusta según sea necesario */  
+    height: 100%; /* Establece la altura máxima (ajusta según tus necesidades) */  
+    overflow-y: auto; /* Permite el desplazamiento vertical */  
+    padding-right: 20px; /* Agrega espacio a la derecha, ajusta el valor según necesites */ 
+    scrollbar-width: thin; /* En Firefox, cambia el ancho de la barra de desplazamiento */  
+    scrollbar-color: #FFE81F transparent; /* Personaliza el color de la barra de desplazamiento */  
+}  
+
+/* Para navegadores WebKit (Chrome, Safari) */  
+.descripcionpersonaje::-webkit-scrollbar {  
+    width: 8px; /* Ajusta el ancho de la barra de desplazamiento */  
+}  
+
+.descripcionpersonaje::-webkit-scrollbar-thumb {  
+    background-color: #FFE81F; /* Color del pulgar de la barra de desplazamiento */  
+    border-radius: 4px; /* Bordes redondeados para el pulgar */  
+}  
+
+.descripcionpersonaje::-webkit-scrollbar-track {  
+    background: transparent; /* Fondo de la pista (track) */  
+}  
+
+.personajenombre {  
+    font-family: 'Orbitron', sans-serif;  
+    font-weight: 600;  
+    color: #FFE81F;  
+    display: flex;  
+    justify-content: center;  
+    font-size: 4vw;  
+    letter-spacing: 0.3vw;  
+    margin-top: 1%;  
+    margin-bottom: 3%;  
+}  
+
+.personajecaracteristica {  
+    color: #fff;  
+    font-family: 'Roboto', sans-serif;  
+    display: flex;  
+    justify-content: center;  
+    font-size: 1.2vw;  
+    letter-spacing: 0.3vw;  
+    margin-left: 3%;  
+}  
+
+.perstrong {  
+    font-family: 'Orbitron', sans-serif;  
+    display: flex;  
+    justify-content: center;  
+    font-weight: 800;  
+    color: #FFE81F;  
+    font-size: 1.7vw;  
+}  
+
+.imagenpersonaje {  
+    width: 39%; /* Ancho de la imagen al 39% del card */  
+    height: 100%; /* Altura del contenedor de la imagen al 100% del card */  
+    overflow: hidden; /* Oculta las partes de la imagen que se salgan del contenedor */  
+    border-radius: 3%; /* Bordes redondeados en el contenedor de la imagen */  
+}  
+
+.imagenpersonaje img {  
+    object-fit: cover; /* La imagen se recorta y se mantiene en proporción */  
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor de la imagen */  
+    height: 100%; /* La imagen ocupa todo el alto del contenedor de la imagen */  
+    border-radius: 3%; /* Mantiene el borde redondeado en la imagen */  
+}

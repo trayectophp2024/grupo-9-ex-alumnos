@@ -86,3 +86,36 @@ document.querySelectorAll('.fullscreen-btn').forEach(button => {
 });
 
 
+
+
+/* function redirigirSiSeleccionado(checkboxId) {  
+    var checkbox = document.getElementById(checkboxId);  
+    if (checkbox.checked) {  
+        switch (checkboxId) {  
+            case "republica":  
+                window.location.href = "republica.html"; // Página para La República Galáctica  
+                break;  
+            case "imperio":  
+                window.location.href = "imperio.html"; // Página para El Imperio Galáctico  
+                break;  
+            case "alianza":  
+                window.location.href = "alianza.html"; // Página para La Alianza Rebelde  
+                break;  
+            case "orden-jedi":  
+                window.location.href = "orden.html"; // Página para La Orden Jedi  
+                break;  
+            case "sith":  
+                window.location.href = "sith.html"; // Página para Los Sith  
+                break;  
+            case "caballeros":  
+                window.location.href = "caballeros.html"; // Página para Los Caballeros de Ren  
+                break;  
+            case "resistencia":  
+                window.location.href = "resistencia.html"; // Página para La Resistencia  
+                break;  
+            case "primera-orden":  
+                window.location.href = "primera.html"; // Página para La Primera Orden  
+                break;  
+        }  
+    }  
+}   */
